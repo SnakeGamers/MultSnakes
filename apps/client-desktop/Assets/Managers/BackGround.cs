@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BackGround : MonoBehaviour
 {
-    public GameObject blue;
+    [SerializeField] private GameObject fieldPrefab;
 
     void Start()
     {
@@ -12,7 +12,7 @@ public class BackGround : MonoBehaviour
             for (int j = 0; j < 10; j++)
             {
                 Vector3 position = new Vector3(i, j, 1);
-                Instantiate(blue, position, Quaternion.identity);
+                Instantiate(fieldPrefab, position, Quaternion.identity);
             }
         }
 
