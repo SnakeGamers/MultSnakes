@@ -225,7 +225,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -250,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -393,6 +393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d51814b9602664479c7dedae4eff3e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGround
+  tile: {fileID: 5638019703078291290, guid: 91115411a59ed4b46ab8973d197e1f23, type: 3}
+  fortile: {fileID: 4156662251953185605, guid: c95aa3244aa5a9b4f8695130f67a7001, type: 3}
   fieldPrefab: {fileID: 5638019703078291290, guid: f37cfcc1957a89741934add584a9999d, type: 3}
 --- !u!4 &878136402
 Transform:
@@ -497,7 +499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3802f038f77557c4a95025eaf8f6c7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Snake
-  snakePrefab: {fileID: 8470427153374038197, guid: ef209cb2f5b81ab489b004e31234e8a4, type: 3}
+  headSnakePrefab: {fileID: 8470427153374038197, guid: ef209cb2f5b81ab489b004e31234e8a4, type: 3}
+  bodySnakePrefab: {fileID: 2666998198773063552, guid: f05170740d009c244bebd611c009a367, type: 3}
   movingSpeed: 100
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

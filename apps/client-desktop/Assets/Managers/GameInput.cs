@@ -25,5 +25,5 @@ public class GameInput : MonoBehaviour
     {
         return _snakeInputActions.Snake.Move.ReadValue<Vector2>();
     }
-
+  
 }
