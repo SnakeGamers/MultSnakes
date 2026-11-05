@@ -225,7 +225,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 30
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -497,8 +497,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3802f038f77557c4a95025eaf8f6c7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Snake
-  snakePrefab: {fileID: 8470427153374038197, guid: ef209cb2f5b81ab489b004e31234e8a4, type: 3}
-  movingSpeed: 100
+  headSnakePrefab: {fileID: 8470427153374038197, guid: ef209cb2f5b81ab489b004e31234e8a4, type: 3}
+  bodySnakePrefab: {fileID: 2666998198773063552, guid: f05170740d009c244bebd611c009a367, type: 3}
+  movingSpeed: 50
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

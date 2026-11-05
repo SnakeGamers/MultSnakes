@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class GameInput : MonoBehaviour
 {
     public static GameInput Instance { get; private set; }
-    public SnakeInputActions _snakeInputActions;
+    private SnakeInputActions _snakeInputActions;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

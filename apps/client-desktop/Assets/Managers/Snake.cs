@@ -16,18 +16,16 @@ public class Snake : MonoBehaviour
     private Rigidbody2D _rbHead;
     private Rigidbody2D _rbBody;
 
-    private List<Vector2> arrBody = new List<Vector2>();
     private List<GameObject> bodySnakeTiles = new List<GameObject>();
+
     void Start()
     {
-        arrBody.Add(new Vector2(0, 0));
-        arrBody.Add(new Vector2(1, 0));
-        arrBody.Add(new Vector2(2, 0));
+        Transform transformParent = gameObject.transform.parent;
+        Default def = transformParent.GetComponent<Default>();
 
-        Vector3 positionHead = new Vector3(arrBody[0].x, arrBody[0].y, 0);
-        Vector3 positionBody1 = new Vector3(arrBody[1].x, arrBody[1].y, 0);
-        Vector3 positionBody2 = new Vector3(arrBody[2].x, arrBody[2].y, 0);
-
+        Vector3 positionHead = def.vectors[0];
+        Vector3 positionBody1 = def.vectors[1];
+        Vector3 positionBody2 = def.vectors[2];//Если надо изменить z придется писать через new Vector3
         //Создание головы
         _headSnake = Instantiate(headSnakePrefab, positionHead, Quaternion.identity, gameObject.transform);
         _rbHead = _headSnake.GetComponent<Rigidbody2D>();
@@ -35,7 +33,6 @@ public class Snake : MonoBehaviour
         //Создание тела
         bodySnakeTiles.Add(Instantiate(bodySnakePrefab, positionBody1, Quaternion.identity, gameObject.transform));
         bodySnakeTiles.Add(Instantiate(bodySnakePrefab, positionBody2, Quaternion.identity, gameObject.transform));
-
     }
 
     void Update()
@@ -43,7 +40,7 @@ public class Snake : MonoBehaviour
         MoveSnake(GameInput.Instance.GetInputVector());
     }
 
-    void MoveSnake(Vector2 newVector)
+    private void MoveSnake(Vector2 newVector)
     {
         timeSinceLastMove += Time.deltaTime;
 
@@ -98,5 +95,4 @@ public class Snake : MonoBehaviour
             positionPredBody = rbBody.position;
         }
     }
-
 }
