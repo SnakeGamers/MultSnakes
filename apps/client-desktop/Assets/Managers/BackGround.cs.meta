@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 1d51814b9602664479c7dedae4eff3e2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - tile: {fileID: 5638019703078291290, guid: 91115411a59ed4b46ab8973d197e1f23, type: 3}
+  - fortile: {fileID: 8470427153374038197, guid: ef209cb2f5b81ab489b004e31234e8a4, type: 3}
+  - fieldPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
